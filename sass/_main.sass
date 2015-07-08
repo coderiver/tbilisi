@@ -46,18 +46,6 @@
 			+transition(color 0.2s ease)
 			&:hover
 				color: #FFF
-		.btn-red
-			display: inline-block
-			padding: 0 20px
-			font-size: 11px
-			text-transform: uppercase
-			color: #FFF
-			background: #E12633
-			line-height: 35px
-			+transition(background 0.2s ease)
-			&:hover
-				background: darken(#E12633, 10%)
-
 
 .icon_texts
 	padding: 0 0 20px
@@ -110,11 +98,6 @@
 			font-size: 14px
 			+rob-black
 			+transition(color 0.2s ease, background 0.2s ease)
-	.sub-menu
-		text-align: left
-		box-shadow: 0px 1px 4px 0px rgba(#333, 0.3)
-		z-index: 2
-
 
 body.header_style_white .top_nav .top_nav_wrapper > ul
 	+r(1200)
@@ -126,9 +109,10 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			float: none
 			display: inline-block
 			vertical-align: top
-			.sub-menu
-				li
-					display: block
+	+r(992)
+		li a
+			padding: 10px 15px
+
 
 
 //welcome
@@ -214,7 +198,6 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 	&__ttl
 		color: #333
 		font-size: 30px
-		font-weight: 900
 		+rob-black
 	&__list
 		margin-top: 20px
@@ -255,16 +238,18 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		width: 25%
 		margin-bottom: 65px
 		font-size: 16px
-		font-weight: 900
 		text-transform: uppercase
 		color: #3D3D3D
 		text-align: center
 		+rob-black
 		&.is-hover
+			.item__txt
+				&:before
+					display: block
 			&:hover
 				.item__txt
 					&:before
-						display: block
+						display: none
 		span
 			display: inline-block
 	.item__txt
@@ -298,6 +283,10 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		+s(wifi)
 	.city_ico
 		+s(city)
+	.clean_ico
+		+s(clean)
+	.security_ico
+		+s(security)
 	+r(992)
 		.item
 			width: 50%
@@ -307,6 +296,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 
 .colwrap
 	display: block
+	margin: 0 -10px
 	+clr
 	&.m-top
 		margin-top: 45px
@@ -317,7 +307,6 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		&.col-100
 			float: none
 			width: 100%
-			margin: 0 -10px
 	.col__bl
 		display: inline-block
 		width: 100%
@@ -340,7 +329,6 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		text-transform: uppercase
 		color: #FFF
 		font-size: 16px
-		font-weight: 900
 		-webkit-background-size: cover
 		-o-background-size: cover
 		background-size: cover
@@ -453,8 +441,9 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		color: #aaaaaa
 	.footer__link
 		color: #aaaaaa
+		text-decoration: underline !important
 		&:hover
-			text-decoration: underline !important
+			text-decoration: none !important
 	+r(768)
 		.copyright,
 		.footer__made
