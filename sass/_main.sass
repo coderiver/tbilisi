@@ -32,7 +32,7 @@
 					left: 0
 					margin: 0
 			&:last-child
-				padding: 0
+				padding-right: 0
 			.fa
 				vertical-align: middle
 				&.fa-envelope-o
@@ -70,7 +70,8 @@
 	.top_bar_info
 		text-transform: uppercase
 		li
-			margin-bottom: 10px
+			padding: 0
+			margin-bottom: 15px
 		i
 			margin-right: 10px
 		.btn-red
@@ -110,8 +111,10 @@
 			+rob-black
 			+transition(color 0.2s ease, background 0.2s ease)
 	.sub-menu
+		text-align: left
 		box-shadow: 0px 1px 4px 0px rgba(#333, 0.3)
 		z-index: 2
+
 
 body.header_style_white .top_nav .top_nav_wrapper > ul
 	+r(1200)
@@ -123,42 +126,49 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			float: none
 			display: inline-block
 			vertical-align: top
-//slider
-#layerslider
-	max-height: 600px
-	overflow: hidden
-	img
-		width: 100%
-	+r(768)
-		.ls-nav-prev
-			left: 10px
-		.ls-nav-next
-			right: 10px
+			.sub-menu
+				li
+					display: block
 
-.slide
+
+//welcome
+.welcome
 	position: relative
-	width: 675px
-	padding: 50px 15px 25px
-	text-align: center
-	background: #fff
-	+box
-	&:before
-		content: ""
+	height: 600px
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	.welcome__in
 		position: absolute
-		top: -9px
-		left: -9px
-		bottom: -9px
-		right: -9px
-		background: rgba(#fff, 0.4)
-		z-index: -1
-	&__ttl
+		top: 50%
+		left: 50%
+		width: 675px
+		height: 265px
+		margin: -132.5px 0 0 -337.5px
+		padding: 50px 15px 25px
+		text-align: center
+		background: #fff
+		+box
+		&:before
+			content: ""
+			position: absolute
+			top: -9px
+			left: -9px
+			bottom: -9px
+			right: -9px
+			background: rgba(#fff, 0.4)
+			z-index: 0
+	.welcome__bl
+		position: relative
+		z-index: 1
+	.welcome__ttl
 		font-size: 42px
 		color: #292929
 		+rob-b
 		p
 			margin-bottom: 0
 			line-height: 1.2
-	&__txt
+	.welcome__txt
 		margin-top: 10px
 		font-size: 16px
 		color: #292929
@@ -169,13 +179,15 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		font-size: 35px
 		color: #E12633
 	+r(992)
-		.slide__ttl
+		.welcome__ttl
 			font-size: 35px
 	+r(768)
-		.slide__ttl
-			font-size: 20px
-		.slide__txt
-			display: none
+		.welcome__in
+			top: 0
+			width: 280px
+			height: auto
+			margin: 0 0 0 -150px
+			+transform(translateY(50%))
 		.fa.fa-angle-down
 			margin-top: 0
 
@@ -248,10 +260,11 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		color: #3D3D3D
 		text-align: center
 		+rob-black
-		&:hover
-			.item__txt
-				&:before
-					display: block
+		&.is-hover
+			&:hover
+				.item__txt
+					&:before
+						display: block
 		span
 			display: inline-block
 	.item__txt
@@ -283,6 +296,8 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		+s(cup)
 	.wifi_ico
 		+s(wifi)
+	.city_ico
+		+s(city)
 	+r(992)
 		.item
 			width: 50%
@@ -438,7 +453,8 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		color: #aaaaaa
 	.footer__link
 		color: #aaaaaa
-		text-decoration: underline !important
+		&:hover
+			text-decoration: underline !important
 	+r(768)
 		.copyright,
 		.footer__made

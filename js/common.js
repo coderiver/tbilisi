@@ -15,18 +15,6 @@ head.ready(function() {
 	//     scrollFixedElements()
 	// });
 
-
-	$("#layerslider").layerSlider({
-		responsive: true,
-		responsiveUnder: 1170,
-		layersContainer: 1170,
-		skin: 'construct',
-		navStartStop: false,
-		navButtons: false,
-		showCircleTimer: false,
-		skinsPath: 'layerslider/ls-skins/'
-	});
-
 	$(".fancybox").fancybox();
 
 });
