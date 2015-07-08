@@ -17,7 +17,6 @@ head.ready(function() {
 
 
 	$("#layerslider").layerSlider({
-		autoStart: false,
 		responsive: true,
 		responsiveUnder: 1170,
 		layersContainer: 1170,
@@ -27,5 +26,7 @@ head.ready(function() {
 		showCircleTimer: false,
 		skinsPath: 'layerslider/ls-skins/'
 	});
+
+	$(".fancybox").fancybox();
 
 });

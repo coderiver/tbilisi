@@ -1,5 +1,5 @@
 //top bar
-.top_bar
+.top_bar, .icon_texts
 	.top_bar_language
 		float: left
 		margin-bottom: 0
@@ -21,6 +21,7 @@
 		li
 			position: relative
 			padding: 0 20px
+			color: #8A8A8A
 			&:before
 				display: none
 			&.is-border
@@ -58,6 +59,24 @@
 				background: darken(#E12633, 10%)
 
 
+.icon_texts
+	padding: 0 0 20px
+	text-align: center
+	.top_bar_language
+		margin-bottom: 10px
+		float: none
+		li
+			margin: 0 15px
+	.top_bar_info
+		text-transform: uppercase
+		li
+			margin-bottom: 10px
+		i
+			margin-right: 10px
+		.btn-red
+			margin-bottom: 0
+
+
 //logo
 .logo
 	float: left
@@ -77,6 +96,9 @@
 		text-align: center
 		letter-spacing: 0.4em
 		+rob-slab
+	+r(1200)
+		float: none
+		text-align: center
 
 
 //main menu
@@ -89,16 +111,34 @@
 			+transition(color 0.2s ease, background 0.2s ease)
 	.sub-menu
 		box-shadow: 0px 1px 4px 0px rgba(#333, 0.3)
+		z-index: 2
 
+body.header_style_white .top_nav .top_nav_wrapper > ul
+	+r(1200)
+		float: none
+		margin: 0 auto
+		text-align: center
+		font-size: 0
+		li
+			float: none
+			display: inline-block
+			vertical-align: top
 //slider
 #layerslider
-	overflow: hidden
 	max-height: 600px
+	overflow: hidden
+	img
+		width: 100%
+	+r(768)
+		.ls-nav-prev
+			left: 10px
+		.ls-nav-next
+			right: 10px
 
 .slide
 	position: relative
 	width: 675px
-	padding: 50px 0 25px 0
+	padding: 50px 15px 25px
 	text-align: center
 	background: #fff
 	+box
@@ -128,6 +168,16 @@
 		margin-top: 20px
 		font-size: 35px
 		color: #E12633
+	+r(992)
+		.slide__ttl
+			font-size: 35px
+	+r(768)
+		.slide__ttl
+			font-size: 20px
+		.slide__txt
+			display: none
+		.fa.fa-angle-down
+			margin-top: 0
 
 //section
 .section
@@ -135,6 +185,8 @@
 	+clr
 	&.no-bottom-pad
 		padding-bottom: 0
+	&.m-bottom-pad
+		padding-bottom: 45px
 	&__bl
 		float: left
 		width: 50%
@@ -170,12 +222,16 @@
 			width: 100%
 		.section__img
 			display: block
-			margin: 0 auto 20px
+			margin: 0 auto 40px
 		.section__txt
-			padding-left: 0
+			padding: 0 20px
 
 .fullwidth
-	background: url(../img/pattern_5.png) repeat
+	background: #f7f7f7 url(../img/bg.png) repeat
+	&.is-dark
+		background: #3d3d3d url(../img/pattern_1.png) repeat
+		h2
+			color: #FFF
 
 .item-wrap
 	font-size: 0
@@ -233,3 +289,159 @@
 	+r(768)
 		.item
 			width: 100%
+
+.colwrap
+	display: block
+	+clr
+	&.m-top
+		margin-top: 45px
+	.col
+		float: left
+		width: 50%
+		font-size: 0
+		&.col-100
+			float: none
+			width: 100%
+			margin: 0 -10px
+	.col__bl
+		display: inline-block
+		width: 100%
+		padding: 0 10px 20px
+		vertical-align: middle
+		&.is-top
+			vertical-align: top
+		&.bl-50
+			width: 50%
+			.fancybox, .col__link
+				img
+					max-height: 170px
+		&.bl-33
+			width: 33.33%
+	.col__el
+		position: relative
+		width: 100%
+		max-width: 400px
+		height: 240px
+		text-transform: uppercase
+		color: #FFF
+		font-size: 16px
+		font-weight: 900
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		+rob-black
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			box-shadow: inset 0px -35px 50px 0px rgba(0,0,0,0.5)
+			z-index: 1
+	.col__name
+		position: absolute
+		left: 25px
+		bottom: 20px
+		z-index: 2
+	.fancybox, .col__link
+		display: inline-block
+		img
+			max-width: 100%
+	.col__link
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(#000, 0.6)
+			z-index: 1
+		&:after
+			content: "Больше фотографий..."
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			margin-top: -8px
+			text-align: center
+			color: #FFF
+			font-size: 16px
+			line-height: 1
+			white-space: nowrap
+			z-index: 2
+	.col__txt
+		padding: 30px 8% 25px
+		text-align: left
+		color: #333
+		font-size: 16px
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07)
+		+clr
+		.txt-bold, strong
+			+rob-b
+		.txt-bold
+			margin-bottom: 15px
+			font-size: 18px
+	.col__btn
+		float: right
+		margin-left: 10px
+		padding: 10px 20px
+		color: #fff
+		background-color: #F73749
+		border-radius: 3px
+	+r(992)
+		.col
+			float: none
+			width: 100%
+			&.col-100
+				text-align: center
+		.col__bl
+			&.bl-50
+				.fancybox, .col__link
+					img
+						max-height: inherit
+			&.bl-33
+				width: 50%
+				img
+					width: 100%
+		.fancybox, .col__link
+			display: block
+			img
+				width: 100%
+	+r(768)
+		.col
+			text-align: center
+			&.col-100
+				margin: 0
+		.col__bl
+			max-width: 400px
+			padding-bottom: 30px
+			&.bl-50
+				width: 100%
+			&.bl-33
+				width: 100%
+		.col__el
+			margin: 0 auto
+
+//footer
+.footer_wrapper
+	+clr
+	.copyright
+		float: left
+	.footer__made
+		float: right
+		font-size: 13px
+		color: #aaaaaa
+	.footer__link
+		color: #aaaaaa
+		text-decoration: underline !important
+	+r(768)
+		.copyright,
+		.footer__made
+			float: none
+			margin: 5px 0
+			text-align: center
