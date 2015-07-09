@@ -74,6 +74,8 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: normal; }
   body.header_style_white .top_nav .top_nav_wrapper > ul li { float: none; display: inline-block; vertical-align: top; } }
 @media only screen and (max-width: 992px) { body.header_style_white .top_nav .top_nav_wrapper > ul li a { padding: 10px 15px; } }
 
+#main.s-bottom-pad { padding-bottom: 40px; }
+
 .welcome { position: relative; height: 600px; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .welcome .welcome__in { position: absolute; top: 50%; left: 50%; width: 675px; height: 265px; margin: -132.5px 0 0 -337.5px; padding: 50px 15px 25px; text-align: center; background: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .welcome .welcome__in:before { content: ""; position: absolute; top: -9px; left: -9px; bottom: -9px; right: -9px; background: rgba(255, 255, 255, 0.4); z-index: 0; }
@@ -200,6 +202,8 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: normal; }
 .list a.is-active { color: #f73749; }
 .list a:hover { text-decoration: underline !important; }
 
+.footer { height: 65px; }
+
 .footer_wrapper { *zoom: 1; }
 .footer_wrapper:after { content: " "; display: table; clear: both; }
 .footer_wrapper .copyright { float: left; }
@@ -207,6 +211,12 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: normal; }
 .footer_wrapper .footer__link { color: #aaaaaa; text-decoration: underline !important; }
 .footer_wrapper .footer__link:hover { text-decoration: none !important; }
 @media only screen and (max-width: 768px) { .footer_wrapper .copyright, .footer_wrapper .footer__made { float: none; margin: 5px 0; text-align: center; } }
+
+.inner-welcome { min-height: 215px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.inner-welcome h2 { margin-top: 70px; color: white; }
+.inner-welcome h2:before { background: white; }
+@media only screen and (max-width: 768px) { .inner-welcome { text-align: center; }
+  .inner-welcome h2 { display: inline-block; text-align: left; } }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
