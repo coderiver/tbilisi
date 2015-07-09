@@ -5,6 +5,8 @@
 	h2
 		margin-top: 70px
 		color: #FFF
+		text-transform: uppercase
+		+rob-black
 		&:before
 			background: #FFF
 	+r(768)
@@ -12,3 +14,42 @@
 		h2
 			display: inline-block
 			text-align: left
+
+//filter
+.filter
+	margin-bottom: 35px
+	font-size: 15px
+	+rob-black
+	+clr
+	.filter__bl
+		float: left
+	.filter__input
+		float: left
+		margin-right: 50px
+		cursor: pointer
+		span, input
+			display: inline-block
+			vertical-align: middle
+		input
+			margin: 0
+		span
+			margin-left: 5px
+	.filter__reset
+		float: right
+		+rob
+		a
+			color: #333
+	.fa-close
+		font-size: 17px
+		margin-right: 2px
+	+r(768)
+		text-align: center
+		.filter__bl,
+		.filter__input,
+		.filter__reset
+			float: none
+		.filter__input
+			display: block
+			margin: 10px 0
+		.filter__reset
+			margin-top: 20px

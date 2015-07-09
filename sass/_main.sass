@@ -227,7 +227,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			margin-bottom: 20px
 	.fa-check
 		color: #e12633
-	+r(992)
+	+r(768)
 		.section__bl
 			float: none
 			margin-bottom: 20px
@@ -239,7 +239,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			padding: 0 20px
 		.section__place
 			margin: 30px auto 0
-			max-width: 450px
+			max-width: 300px
 
 .fullwidth
 	background: #f7f7f7 url(../img/bg.png) repeat
@@ -398,7 +398,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			white-space: nowrap
 			z-index: 2
 	.col__txt
-		padding: 30px 8% 25px
+		padding: 30px 7% 25px
 		text-align: left
 		color: #333
 		font-size: 16px
@@ -407,8 +407,10 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		.txt-bold, strong
 			+rob-b
 		.txt-bold
-			margin-bottom: 15px
 			font-size: 18px
+	.col__info
+		margin-bottom: 15px
+		+clr
 	.col__btn
 		float: right
 		margin-left: 10px
@@ -416,6 +418,16 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		color: #fff
 		background-color: #F73749
 		border-radius: 3px
+		&.s-pad
+			padding: 10px
+	.col__person
+		position: relative
+		float: right
+	.person_ico
+		position: absolute
+		top: -5px
+		left: -17px
+		+s(person)
 	+r(992)
 		.col
 			float: none
@@ -449,6 +461,8 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 				width: 100%
 		.col__el
 			margin: 0 auto
+		.col__txt
+			font-size: 14px
 
 //slider
 .slider
