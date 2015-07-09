@@ -17,4 +17,14 @@ head.ready(function() {
 
 	$(".fancybox").fancybox();
 
+	$('.slick').slick({
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true
+	});
+
+	 $(".js-scroll").mCustomScrollbar();
+
 });

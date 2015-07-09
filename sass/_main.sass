@@ -183,9 +183,15 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		padding-bottom: 0
 	&.m-bottom-pad
 		padding-bottom: 45px
+	&__in
+		margin-top: 35px
 	&__bl
 		float: left
 		width: 50%
+		&.w-65
+			width: 65%
+		&.w-35
+			width: 35%
 	&__img
 		max-width: 100%
 	&__txt
@@ -208,6 +214,12 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			display: block
 			margin: 0
 			overflow: hidden
+	&__place
+		margin-left: 50px
+		overflow: auto
+		height: 420px
+		.list
+			margin-bottom: 20px
 	.fa-check
 		color: #e12633
 	+r(992)
@@ -220,6 +232,9 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			margin: 0 auto 40px
 		.section__txt
 			padding: 0 20px
+		.section__place
+			margin: 30px auto 0
+			max-width: 450px
 
 .fullwidth
 	background: #f7f7f7 url(../img/bg.png) repeat
@@ -429,6 +444,95 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 				width: 100%
 		.col__el
 			margin: 0 auto
+
+//slider
+.slider
+	img
+		display: none
+		&:first-child
+			display: block
+	.slick-dots
+		left: 20px
+		bottom: 20px
+		li
+			margin-right: 9px
+			&.slick-active
+				button
+					opacity: 1
+					background: #fff
+			button
+				width: 12px
+				height: 12px
+				background: none
+				box-shadow: none
+				border: 1px solid
+				border-color: rgba(#fff, 0.7)
+	.slick-prev,
+	.slick-next
+		width: 45px
+		height: 45px
+		top: inherit
+		bottom: 20px
+		margin: 0
+		border: 3px solid #ccc
+		&:before
+			margin-top: -1px
+			font-size: 22px
+			font-family: "FontAwesome"
+			line-height: 45px
+			color: #ccc
+		&:hover
+			border-color: #f73749
+			background: #F73749
+			&:before
+				color: #fff
+	.slick-prev
+		right: 75px
+		left: inherit
+		&:before
+			content: "\f053"
+			margin-right: 3px
+	.slick-next
+		right: 20px
+		&:before
+			content: "\f054"
+			margin-left: 3px
+
+//scroll
+.scroll
+	.mCSB_scrollTools
+		width: 4px
+		.mCSB_dragger
+			&:hover
+				.mCSB_dragger_bar
+					background-color: #f73749
+			.mCSB_dragger_bar
+				background-color: #f73749
+				-webkit-border-radius: 0
+				border-radius: 0
+		&.mCSB_scrollTools_onDrag
+			.mCSB_dragger
+				.mCSB_dragger_bar
+					background-color: #F73749
+		.mCSB_draggerRail
+			width: 4px
+			background-color: #efefef
+			-webkit-border-radius: 0
+			border-radius: 0
+
+.list
+	font-size: 16px
+	strong
+		color: #000
+		font-size: 17px
+		+rob-b
+	a
+		color: #333
+		&.is-active
+			color: #F73749
+		&:hover
+			text-decoration: underline !important
+
 
 //footer
 .footer_wrapper
