@@ -9,6 +9,13 @@
 		+rob-black
 		&:before
 			background: #FFF
+		&.no-border
+			margin-top: 85px
+	small
+		display: block
+		margin-bottom: 10px
+		color: #FFF
+		font-size: 14px
 	+r(768)
 		text-align: center
 		h2
@@ -53,3 +60,51 @@
 			margin: 10px 0
 		.filter__reset
 			margin-top: 20px
+
+//details
+.details
+	padding: 0 10px
+	.details__head
+		padding: 30px 20px 25px
+		text-align: center
+		font-size: 20px
+		background: #3d3d3d url(../img/pattern_1.png) repeat
+		color: #FFF
+		border-radius: 5px 5px 0 0
+	.details__ttl,
+	.details__person
+		display: inline-block
+	.details__ttl
+		strong
+			+rob-b
+	.details__person
+		position: relative
+		margin-left: 55px
+	.details__body
+		border: 1px solid #e2e2e2
+		border-radius: 0 0 5px 5px
+	.details__table
+		font-size: 16px
+		color: #333
+		border-top: 1px solid #e2e2e2
+		tr
+			&:nth-child(even)
+				background: #F3F3F3
+		td
+			padding: 10px 15px
+	.details__plan
+		padding: 25px 0
+		text-align: center
+		.fancybox
+			display: inline-block
+	.person_ico
+		position: absolute
+		top: -3px
+		left: -17px
+		+s(person-white)
+	.btn-red
+		width: 100%
+		margin-top: 30px
+		border-radius: 6px
+	.txt-right
+		text-align: right

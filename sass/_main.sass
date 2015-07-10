@@ -15,7 +15,8 @@
 				font-size: 11px
 				text-transform: uppercase
 				+transition(color 0.2s ease)
-				&:hover
+				&:hover,
+				&.is-active
 					color: #FFF
 	.top_bar_info
 		li
@@ -119,6 +120,28 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 #main
 	&.s-bottom-pad
 		padding-bottom: 40px
+	ul
+		li
+			position: relative
+			padding-left: 25px
+			&:before
+				content: "\f00c"
+				position: absolute
+				top: 0
+				left: -1px
+				font-family: "FontAwesome"
+				color: #E12633
+	ol
+		font-size: 16px
+		li
+			&:first-child
+				color: #000
+				font-size: 17px
+				+rob-b
+		a
+			color: #F73749
+			&:hover
+				text-decoration: underline !important
 
 //welcome
 .welcome
@@ -188,42 +211,35 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		padding-bottom: 0
 	&.m-bottom-pad
 		padding-bottom: 45px
-	&__in
+	.section__in
 		margin-top: 35px
-	&__bl
+	.section__bl
 		float: left
 		width: 50%
 		&.w-65
 			width: 65%
 		&.w-35
 			width: 35%
-	&__img
+		&.w-33
+			width: 33.33%
+	.section__img
 		max-width: 100%
-	&__txt
+	.section__txt
 		padding-left: 45px
 		color: #777
 		font-size: 15px
 		line-height: 1.5
-		p
+		p, ul
 			margin-top: 20px
-	&__ttl
+	.section__ttl
 		color: #333
 		font-size: 30px
 		+rob-black
-	&__list
-		margin-top: 20px
-		.fa
-			float: left
-			margin: 5px 15px 0 0
-		p
-			display: block
-			margin: 0
-			overflow: hidden
-	&__place
+	.section__place
 		margin-left: 50px
 		overflow: auto
 		height: 420px
-		.list
+		ol
 			margin-bottom: 20px
 	.fa-check
 		color: #e12633
@@ -341,6 +357,10 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 					max-height: 170px
 		&.bl-33
 			width: 33.33%
+		.col__card
+			&:hover
+				.col__btn
+					background: darken(#f73749, 10%)
 	.col__el
 		position: relative
 		width: 100%
@@ -416,8 +436,9 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		margin-left: 10px
 		padding: 10px 20px
 		color: #fff
-		background-color: #F73749
+		background: #F73749
 		border-radius: 3px
+		+transition(background 0.2s ease)
 		&.s-pad
 			padding: 10px
 	.col__person
@@ -465,11 +486,26 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			font-size: 14px
 
 //slider
-.slider
+.slick
 	img
 		display: none
 		&:first-child
 			display: block
+	&.is-carousel
+		.slick-prev,
+		.slick-next
+			top: 50%
+			margin-top: -22.5px
+			bottom: inherit
+		.slick-prev
+			right: 100%
+			margin-right: 6%
+		.slick-next
+			right: inherit
+			left: 100%
+			margin-left: 6%
+		img
+			padding: 0 10px
 	.slick-dots
 		left: 20px
 		bottom: 20px
@@ -516,6 +552,12 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		&:before
 			content: "\f054"
 			margin-left: 3px
+	+r(1360)
+		&.is-carousel
+			.slick-prev
+				margin-right: -55px
+			.slick-next
+				margin-left: -55px
 
 //scroll
 .scroll
@@ -538,20 +580,6 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			background-color: #efefef
 			-webkit-border-radius: 0
 			border-radius: 0
-
-.list
-	font-size: 16px
-	strong
-		color: #000
-		font-size: 17px
-		+rob-b
-	a
-		color: #333
-		&.is-active
-			color: #F73749
-		&:hover
-			text-decoration: underline !important
-
 
 //footer
 .footer

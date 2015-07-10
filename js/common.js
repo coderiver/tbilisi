@@ -6,7 +6,7 @@ head.ready(function() {
 
 	$(".fancybox").fancybox();
 
-	$('.slick').slick({
+	$('.js-slick').slick({
 		dots: true,
 		infinite: true,
 		slidesToShow: 1,
@@ -14,6 +14,15 @@ head.ready(function() {
 		adaptiveHeight: true
 	});
 
-	 $(".js-scroll").mCustomScrollbar();
+	$('.js-carousel').slick({
+		dots: false,
+		infinite: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+	});
+
+	 $(".js-scroll").mCustomScrollbar({
+		scrollInertia: 300
+	 });
 
 });

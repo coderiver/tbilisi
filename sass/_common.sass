@@ -76,6 +76,11 @@ body
 h1, h2, h3, h4, h5, h6, strong, b
 	font-weight: normal
 
+h2
+	&.no-border
+		&:before
+			display: none
+
 .clearfix
 	+clr
 
@@ -106,3 +111,5 @@ h1, h2, h3, h4, h5, h6, strong, b
 	&:active,
 	&:visited
 		color: #FFF
+	&.is-rounded
+		border-radius: 3px
