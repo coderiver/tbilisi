@@ -99,6 +99,7 @@
 				background: #F3F3F3
 		td
 			padding: 10px 15px
+			border: none
 	.details__plan
 		padding: 25px 10px
 		text-align: center
@@ -112,9 +113,10 @@
 		font-size: 16px
 		.form__input
 			&:first-child
-				.input
+				.textarea
 					padding-bottom: 50px
 					border-radius: 5px 5px 0 0
+					border-bottom: 1px solid #E9E9E9
 			&:last-child
 				.input
 					border-radius: 0 0 5px 5px
@@ -186,6 +188,8 @@
 	display: table
 	.tbl__ttl
 		padding-top: 55px
+		font-weight: normal
+		+rob-black
 	.tbl__bl
 		display: table-cell
 		vertical-align: top
@@ -197,8 +201,35 @@
 		&.w-32
 			width: 32.2%
 	.tbl__info
+		max-width: 685px
 		font-size: 16px
 		line-height: 1.45
+		p, .tbl__ttl
+			&:first-child
+				padding: 55px 0 0
+				margin-bottom: 25px
+		strong
+			margin-right: 5px
+			font-weight: normal
+			+rob-b
+		a
+			position: relative
+			display: inline-block
+			color: #333
+			&:before
+				content: ""
+				position: absolute
+				height: 1px
+				left: 0
+				right: 0
+				bottom: 0
+				background: #9C9C9C
+			&:hover
+				&:before
+					display: none
+		.tbl__ttl
+			&.no-top-pad
+				padding-top: 0
 	.tbl__pay
 		margin: 30px 0 20px
 		font-size: 0
@@ -213,16 +244,16 @@
 			margin-right: 5px
 	.txt-large
 		font-size: 20px
-		margin-bottom: 20px
+		margin: 20px 0
 	.cash_ico
 		+s(cash)
 	.card_ico
 		+s(card)
-	+r(768)
+	+r(992)
 		display: block
 		.tbl__bl
 			display: block
-			margin-bottom: 20px
+			margin-bottom: 40px
 			&.w-67,
 			&.w-32
 				width: 100%
@@ -230,4 +261,6 @@
 			&.with-bg
 				background: none
 		.details
+			max-width: 450px
+			margin: 0 auto
 			background: #3d3d3d url(../img/pattern_1.png) repeat

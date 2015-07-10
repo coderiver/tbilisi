@@ -25,13 +25,15 @@ head.ready(function() {
 		scrollInertia: 300
 	});
 
-	$('.js-click').click(function(e){
+	if($(".js-scroll-to").length){
+		$('.js-click').click(function(e){
 
-		e.preventDefault();
+			e.preventDefault();
 
-		$('html, body').animate({
-		    scrollTop: $(".js-scroll-to").offset().top- 65
-		}, 1000);
-	});
+			$('html, body').animate({
+			    scrollTop: $(".js-scroll-to").offset().top- 65
+			}, 1000);
+		});
+	}
 
 });
