@@ -78,12 +78,13 @@ h2.no-border:before { display: none; }
 @media only screen and (max-width: 992px) { body.header_style_white .top_nav .top_nav_wrapper > ul li a { padding: 10px 15px; } }
 
 #main.s-bottom-pad { padding-bottom: 40px; }
-#main ul li { position: relative; padding-left: 25px; }
-#main ul li:before { content: "\f00c"; position: absolute; top: 0; left: -1px; font-family: "FontAwesome"; color: #e12633; }
-#main ol { font-size: 16px; }
-#main ol li:first-child { color: black; font-size: 17px; font-family: "Roboto Bold", Arial, sans-serif; }
-#main ol a { color: #f73749; }
-#main ol a:hover { text-decoration: underline !important; }
+
+.content-area ul li { position: relative; padding-left: 25px; }
+.content-area ul li:before { content: "\f00c"; position: absolute; top: 0; left: -1px; font-family: "FontAwesome"; color: #e12633; }
+.content-area ol { font-size: 16px; }
+.content-area ol li:first-child { color: black; font-size: 17px; font-family: "Roboto Bold", Arial, sans-serif; }
+.content-area ol a { color: #f73749; }
+.content-area ol a:hover { text-decoration: underline !important; }
 
 .welcome { position: relative; height: 600px; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .welcome .welcome__in { position: absolute; top: 50%; left: 50%; width: 675px; height: 265px; margin: -132.5px 0 0 -337.5px; padding: 50px 15px 25px; text-align: center; background: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -195,10 +196,10 @@ h2.no-border:before { display: none; }
 .slick.is-carousel .slick-prev { right: 100%; margin-right: 6%; }
 .slick.is-carousel .slick-next { right: inherit; left: 100%; margin-left: 6%; }
 .slick.is-carousel img { padding: 0 10px; }
-.slick .slick-dots { left: 20px; bottom: 20px; }
-.slick .slick-dots li { margin-right: 9px; }
-.slick .slick-dots li.slick-active button { opacity: 1; background: white; }
-.slick .slick-dots li button { width: 12px; height: 12px; background: none; box-shadow: none; border: 1px solid; border-color: rgba(255, 255, 255, 0.7); }
+.slick ul.slick-dots { left: 20px; bottom: 20px; }
+.slick ul.slick-dots li { margin-right: 9px; padding-left: 0; }
+.slick ul.slick-dots li.slick-active button { opacity: 1; background: white; }
+.slick ul.slick-dots li button { width: 12px; height: 12px; background: none; box-shadow: none; border: 1px solid; border-color: rgba(255, 255, 255, 0.7); }
 .slick .slick-prev, .slick .slick-next { width: 45px; height: 45px; top: inherit; bottom: 20px; margin: 0; border: 3px solid #cccccc; }
 .slick .slick-prev:before, .slick .slick-next:before { margin-top: -1px; font-size: 22px; font-family: "FontAwesome"; line-height: 45px; color: #cccccc; }
 .slick .slick-prev:hover, .slick .slick-next:hover { border-color: #f73749; background: #f73749; }
