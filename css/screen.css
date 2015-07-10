@@ -80,6 +80,10 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333333; font-size: 16px
 
 .banner img { max-width: 100%; }
 
+.map { position: relative; min-height: 690px; }
+.map iframe { position: absolute; width: 100%; height: 100%; }
+@media only screen and (max-width: 992px) { .map { min-height: 300px; } }
+
 .top_bar .top_bar_language, .icon_texts .top_bar_language { float: left; margin-bottom: 0; }
 .top_bar .top_bar_language li, .icon_texts .top_bar_language li { position: relative; display: inline-block; margin-right: 30px; vertical-align: middle; line-height: 34px; }
 .top_bar .top_bar_language li a, .icon_texts .top_bar_language li a { display: block; color: #8a8a8a; font-size: 11px; text-transform: uppercase; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; -webkit-transition: color 0.2s ease; transition: color 0.2s ease; }
@@ -333,6 +337,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333333; font-size: 16px
 .tbl .tbl__bl.with-bg { background: #3d3d3d url(../img/pattern_1.png) repeat; }
 .tbl .tbl__bl.w-67 { width: 67.8%; padding-right: 20px; }
 .tbl .tbl__bl.w-32 { width: 32.2%; }
+.tbl .tbl__bl.no-right-pad { padding-right: 0; }
 .tbl .tbl__info { max-width: 685px; font-size: 16px; line-height: 1.45; }
 .tbl .tbl__info p:first-child, .tbl .tbl__info .tbl__ttl:first-child { padding: 55px 0 0; margin-bottom: 25px; }
 .tbl .tbl__info strong { margin-right: 5px; font-weight: normal; font-family: "Roboto Bold", Arial, sans-serif; }
@@ -345,6 +350,14 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333333; font-size: 16px
 .tbl .tbl__pay span { font-size: 16px; }
 .tbl .tbl__pay span:first-child { margin-right: 35px; }
 .tbl .tbl__pay i { margin-right: 5px; }
+.tbl .tbl__toggle { margin-bottom: 10px; }
+.tbl .tbl__ask { position: relative; padding: 15px 20px; text-transform: uppercase; font-size: 15px; font-weight: normal; color: #333333; background: white; cursor: pointer; border: 3px solid #d5d5d5; font-family: "Roboto Black", Arial, sans-serif; }
+.tbl .tbl__ask:before { content: "\f0d7"; position: absolute; top: 50%; right: 20px; margin-top: -9px; font-family: "FontAwesome"; font-size: 20px; color: #333333; line-height: 1; }
+.tbl .tbl__ask.is-active { background: #f73749; color: white; border-color: #f73749; }
+.tbl .tbl__ask.is-active:before { content: "\f0d8"; color: white; margin-top: -12px; }
+.tbl .tbl__more { padding: 35px 20px 25px; font-size: 16px; line-height: 1.5; }
+.tbl .tbl__more p { margin-bottom: 20px; }
+.tbl .tbl__more strong { font-family: "Roboto Bold", Arial, sans-serif; }
 .tbl .txt-large { font-size: 20px; margin: 20px 0; }
 .tbl .cash_ico { background: url('../img/icons-s988532bb27.png') 0 -23px no-repeat; width: 23px; height: 17px; }
 .tbl .card_ico { background: url('../img/icons-s988532bb27.png') 0 0 no-repeat; width: 19px; height: 13px; }
