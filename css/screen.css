@@ -133,7 +133,7 @@ table th { font-weight: normal; font-family: "Roboto Bold", Arial, sans-serif; }
 .section .section__bl.w-33 { width: 33.33%; }
 .section .section__img { max-width: 100%; }
 .section .section__txt { padding-left: 45px; color: #777777; font-size: 15px; line-height: 1.5; }
-.section .section__txt p, .section .section__txt ul { margin-top: 20px; }
+.section .section__txt .section__ttl, .section .section__txt p { margin-bottom: 20px; }
 .section .section__ttl { color: #333333; font-size: 30px; font-family: "Roboto Black", Arial, sans-serif; }
 .section .section__place { margin-left: 50px; overflow: auto; height: 420px; }
 .section .section__place ol { margin-bottom: 20px; }
@@ -220,7 +220,7 @@ table th { font-weight: normal; font-family: "Roboto Bold", Arial, sans-serif; }
   .colwrap .col__txt { font-size: 14px; } }
 
 .slick img { display: none; }
-.slick img:first-child { display: block; }
+.slick img:first-child { display: block; max-width: 100%; }
 .slick.is-carousel .slick-prev, .slick.is-carousel .slick-next { top: 50%; margin-top: -22.5px; bottom: inherit; }
 .slick.is-carousel .slick-prev { right: 100%; margin-right: 6%; }
 .slick.is-carousel .slick-next { right: inherit; left: 100%; margin-left: 6%; }
@@ -288,7 +288,7 @@ table th { font-weight: normal; font-family: "Roboto Bold", Arial, sans-serif; }
 .details .details__person { margin-left: 55px; }
 .details .details__person span { position: relative; }
 .details .details__body { border: 1px solid #e2e2e2; border-radius: 0 0 5px 5px; }
-.details .details__table { font-size: 16px; color: #333333; border-top: 1px solid #e2e2e2; table-layout: fixed; }
+.details .details__table { margin: 0; font-size: 16px; color: #333333; border-top: 1px solid #e2e2e2; table-layout: fixed; }
 .details .details__table tr:nth-child(even) { background: #f3f3f3; }
 .details .details__table td { padding: 10px 15px; }
 .details .details__plan { padding: 25px 10px; text-align: center; }
