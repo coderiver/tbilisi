@@ -71,6 +71,10 @@
 		background: #3d3d3d url(../img/pattern_1.png) repeat
 		color: #FFF
 		border-radius: 5px 5px 0 0
+	.details__in
+		padding: 0 25px 55px
+		.tbl__ttl
+			color: #FFF
 	.details__ttl,
 	.details__person
 		display: inline-block
@@ -78,8 +82,9 @@
 		strong
 			+rob-b
 	.details__person
-		position: relative
 		margin-left: 55px
+		span
+			position: relative
 	.details__body
 		border: 1px solid #e2e2e2
 		border-radius: 0 0 5px 5px
@@ -87,16 +92,37 @@
 		font-size: 16px
 		color: #333
 		border-top: 1px solid #e2e2e2
+		table-layout: fixed
 		tr
 			&:nth-child(even)
 				background: #F3F3F3
 		td
 			padding: 10px 15px
 	.details__plan
-		padding: 25px 0
+		padding: 25px 10px
 		text-align: center
 		.fancybox
 			display: inline-block
+			img
+				max-width: 100%
+	.details__form
+		margin: 35px 0 0
+		color: #FFF
+		font-size: 16px
+		.form__input
+			&:first-child
+				.input
+					padding-bottom: 50px
+					border-radius: 5px 5px 0 0
+			&:last-child
+				.input
+					border-radius: 0 0 5px 5px
+					border-bottom: none
+		p
+			margin-top: 35px
+		.input
+			padding: 16px 17px
+			border-bottom: 1px solid #E9E9E9
 	.person_ico
 		position: absolute
 		top: -3px
@@ -108,3 +134,99 @@
 		border-radius: 6px
 	.txt-right
 		text-align: right
+	+r(992)
+		.details__ttl,
+		.details__person
+			display: block
+		.details__ttl
+			margin-bottom: 10px
+		.details__person
+			margin-left: 17px
+		.btn-red
+			margin-top: 17px
+	+r(768)
+		max-width: 450px
+		margin: 0 auto 40px
+
+//description
+.description
+	margin-bottom: 50px
+	padding-left: 50px
+	&:last-child
+		margin-bottom: 0
+	h4
+		margin-bottom: 20px
+	ul li, ol li
+		line-height: 1.8
+	ol li
+		&:first-child
+			+rob
+	.col__bl
+		width: auto
+		font-size: 16px
+		text-align: left
+	+r(992)
+		.col
+			&.col-100
+				text-align: left
+	+r(768)
+		padding-left: 0
+		h4
+			max-width: 400px
+			margin: 0 auto 20px
+			padding: 0 10px
+		.col
+			&.col-100
+				text-align: center
+
+
+//tbl
+.tbl
+	display: table
+	.tbl__ttl
+		padding-top: 55px
+	.tbl__bl
+		display: table-cell
+		vertical-align: top
+		&.with-bg
+			background: #3d3d3d url(../img/pattern_1.png) repeat
+		&.w-67
+			width: 67.8%
+			padding-right: 20px
+		&.w-32
+			width: 32.2%
+	.tbl__info
+		font-size: 16px
+		line-height: 1.45
+	.tbl__pay
+		margin: 30px 0 20px
+		font-size: 0
+		span, i
+			display: inline-block
+			vertical-align: middle
+		span
+			font-size: 16px
+			&:first-child
+				margin-right: 35px
+		i
+			margin-right: 5px
+	.txt-large
+		font-size: 20px
+		margin-bottom: 20px
+	.cash_ico
+		+s(cash)
+	.card_ico
+		+s(card)
+	+r(768)
+		display: block
+		.tbl__bl
+			display: block
+			margin-bottom: 20px
+			&.w-67,
+			&.w-32
+				width: 100%
+				padding: 0
+			&.with-bg
+				background: none
+		.details
+			background: #3d3d3d url(../img/pattern_1.png) repeat

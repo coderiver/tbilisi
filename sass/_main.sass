@@ -97,6 +97,7 @@
 		a
 			padding: 24px 15px
 			font-size: 14px
+			font-weight: normal
 			+rob-black
 			+transition(color 0.2s ease, background 0.2s ease)
 
@@ -114,36 +115,6 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		li a
 			padding: 10px 15px
 
-
-
-//main
-#main
-	&.s-bottom-pad
-		padding-bottom: 40px
-
-.content-area
-	ul
-		li
-			position: relative
-			padding-left: 25px
-			&:before
-				content: "\f00c"
-				position: absolute
-				top: 0
-				left: -1px
-				font-family: "FontAwesome"
-				color: #E12633
-	ol
-		font-size: 16px
-		li
-			&:first-child
-				color: #000
-				font-size: 17px
-				+rob-b
-		a
-			color: #F73749
-			&:hover
-				text-decoration: underline !important
 
 //welcome
 .welcome
@@ -213,8 +184,14 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		padding-bottom: 0
 	&.m-bottom-pad
 		padding-bottom: 45px
+	&.no-pad
+		padding: 0
+	&.with-margin
+		margin-right: -10px
 	.section__in
 		margin-top: 35px
+		p
+			font-size: 16px
 	.section__bl
 		float: left
 		width: 50%
@@ -250,6 +227,12 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			float: none
 			margin-bottom: 20px
 			width: 100%
+			&.w-65
+				width: 100%
+			&.w-35
+				width: 100%
+			&.w-33
+				width: 100%
 		.section__img
 			display: block
 			margin: 0 auto 40px
@@ -350,6 +333,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		width: 100%
 		padding: 0 10px 20px
 		vertical-align: middle
+		font-size: 14px
 		&.is-top
 			vertical-align: top
 		&.bl-50
@@ -386,6 +370,19 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			bottom: 0
 			box-shadow: inset 0px -35px 50px 0px rgba(0,0,0,0.5)
 			z-index: 1
+		.vip
+			position: absolute
+			top: 23px
+			right: 23px
+			width: 42px
+			height: 42px
+			background: #FFF
+			border-radius: 4px
+			+vertical
+		.star_ico
+			display: inline-block
+			vertical-align: middle
+			+s(star)
 	.col__name
 		position: absolute
 		left: 25px

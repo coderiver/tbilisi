@@ -21,8 +21,17 @@ head.ready(function() {
 		slidesToScroll: 3,
 	});
 
-	 $(".js-scroll").mCustomScrollbar({
+	$(".js-scroll").mCustomScrollbar({
 		scrollInertia: 300
-	 });
+	});
+
+	$('.js-click').click(function(e){
+
+		e.preventDefault();
+
+		$('html, body').animate({
+		    scrollTop: $(".js-scroll-to").offset().top- 65
+		}, 1000);
+	});
 
 });
