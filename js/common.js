@@ -35,5 +35,17 @@ head.ready(function() {
 			}, 1000);
 		});
 	}
-
+	//accordion
+	$(".js-accordion-title").on("click", function(){
+		if ($(this).parents(".js-accordion").hasClass("is-active")) {
+			$(this).parents(".js-accordion").stop(true,true).removeClass("is-active").find(".js-accordion-body").slideUp();
+		}
+		else {
+			$(".js-accordion").removeClass("is-active");
+			$(".js-accordion-body").slideUp();
+			$(this).parents(".js-accordion").stop(true,true).toggleClass("is-active").find(".js-accordion-body").slideDown()
+		}
+		
+		return false;
+	});
 });

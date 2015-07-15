@@ -186,6 +186,7 @@
 //tbl
 .tbl
 	display: table
+	width: 100% 
 	.tbl__ttl
 		padding-top: 55px
 		font-weight: normal
@@ -244,8 +245,19 @@
 				margin-right: 35px
 		i
 			margin-right: 5px
+
+
 	.tbl__toggle
 		margin-bottom: 10px
+		&.is-active
+			.tbl__ask
+				background: #F73749
+				color: #fff
+				border-color: #f73749
+				&:before
+					content: "\f0d8"
+					color: #FFF
+					margin-top: -12px
 	.tbl__ask
 		position: relative
 		padding: 15px 20px
@@ -257,6 +269,7 @@
 		cursor: pointer
 		border: 3px solid #d5d5d5
 		+rob-black
+		+transition(color, background, border-color, 300ms)
 		&:before
 			content: "\f0d7"
 			position: absolute
@@ -267,18 +280,11 @@
 			font-size: 20px
 			color: #333
 			line-height: 1
-		&.is-active
-			background: #F73749
-			color: #fff
-			border-color: #f73749
-			&:before
-				content: "\f0d8"
-				color: #FFF
-				margin-top: -12px
 	.tbl__more
 		padding: 35px 20px 25px
 		font-size: 16px
 		line-height: 1.5
+		display: none
 		p
 			margin-bottom: 20px
 		strong
