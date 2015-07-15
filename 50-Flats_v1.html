@@ -143,11 +143,8 @@
 						<div class="container">
 							<div class="tbl">
 								<div class="tbl__bl w-67 no-right-pad">
-									<div class="map" id="map-canvas">
-										<!-- <div id="map-canvas"> -->
-											
-										<!-- </div> -->
-<!-- 										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1252.4459502852083!2d44.771865360686014!3d41.702491710433556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cc9920fc257%3A0x6e7b3ca6c79c2639!2zTmlubyBaaHZhbmlhIFN0LCBUYmlsaXNpLCDQk9GA0YPQt9C40Y8!5e0!3m2!1sru!2sua!4v1436538013353" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+									<div class="map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1252.4459502852083!2d44.771865360686014!3d41.702491710433556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cc9920fc257%3A0x6e7b3ca6c79c2639!2zTmlubyBaaHZhbmlhIFN0LCBUYmlsaXNpLCDQk9GA0YPQt9C40Y8!5e0!3m2!1sru!2sua!4v1436538013353" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 									</div>
 								</div>
 								<div class="tbl__bl with-bg w-32">
@@ -182,34 +179,7 @@
 						<div class="section">
 							<div class="tbl">
 								<div class="tbl__bl w-67">
-									<div class="tbl__toggle js-accordion">
-										<p class="tbl__ask js-accordion-title">Как добраться из аеропорта</p>
-										<div class="tbl__more js-accordion-body">
-											<p>В центр Тбилиси можно доехать на автобусе, электричке-шаттле или такси.</p>
-											<p>Улица Джорджа У. Буша ведёт из аэропорта в центр Тбилиси.</p>
-											<strong>Автобус</strong>
-											<p>Самый экономичный способ — автобус № 37. Едет до железнодорожного вокзала.</p>
-											<p>Стоимость проезда 50 тетри. В автобусе можно заплатить только мелочью, монетой в 50 тетри, так что готовьте мелочь. Интервал движения — примерно полчаса (с 07.00 до 21:30).</p>
-											<strong>Электричка</strong>
-											<p>Электричка ходит шесть раз в сутки. Отправление из аэропорта в 01:45, 5:45, 9:00, 11:45, 18:15 и 21:15, конечное прибытие — на железнодорожный вокзал Тбилиси. Время в пути примерно полчаса, стоимость проезда — 2 GEL.</p>
-											<strong>Такси</strong>
-											<p>Такси довезет с комфортом до города примерно за 30 GEL.</p>
-										</div>
-									</div>
-									<div class="tbl__toggle js-accordion">
-										<p class="tbl__ask js-accordion-title">Как добраться из ж/д вокзала</p>
-										<div class="tbl__more js-accordion-body">
-											<p>В центр Тбилиси можно доехать на автобусе, электричке-шаттле или такси.</p>
-											<p>Улица Джорджа У. Буша ведёт из аэропорта в центр Тбилиси.</p>
-											<strong>Автобус</strong>
-											<p>Самый экономичный способ — автобус № 37. Едет до железнодорожного вокзала.</p>
-											<p>Стоимость проезда 50 тетри. В автобусе можно заплатить только мелочью, монетой в 50 тетри, так что готовьте мелочь. Интервал движения — примерно полчаса (с 07.00 до 21:30).</p>
-											<strong>Электричка</strong>
-											<p>Электричка ходит шесть раз в сутки. Отправление из аэропорта в 01:45, 5:45, 9:00, 11:45, 18:15 и 21:15, конечное прибытие — на железнодорожный вокзал Тбилиси. Время в пути примерно полчаса, стоимость проезда — 2 GEL.</p>
-											<strong>Такси</strong>
-											<p>Такси довезет с комфортом до города примерно за 30 GEL.</p>
-										</div>
-									</div>
+
 								</div>
 								<div class="tbl__bl w-32">
 									<aside class="contacts-wrap">
@@ -247,28 +217,5 @@
 </div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
-<script>
-
-	function initialize() {
-	  var myLatlng = new google.maps.LatLng(41.700961, 44.767650);
-	  var mapOptions = {
-	    zoom: 18,
-		scrollwheel: false,
-		zoomControl: true,
-	    center: myLatlng
-	  }
-	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	var image = 'img/house.png';
-
-	  var marker = new google.maps.Marker({
-	      position: myLatlng,
-	      map: map,
-	      title: 'г. Тбилиси, ул. Нино Жвания, 28',
-		  icon: image
-	  });
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 </body>
 </html>
