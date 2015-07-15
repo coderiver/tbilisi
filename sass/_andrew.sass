@@ -1,11 +1,40 @@
 $redd: #e12633
+.h2_bl
+	+rob-black
 .icon-marker
 	display: inline-block
 	+svg(marker,18,20)
 .contacts-wrap
-	border: 3px solid #D5D5D5 
+	&_bd
+		border: 3px solid #D5D5D5 
+	&_tb
+		position: relative
+		margin-right: -6px
+		&:before,
+		&:after
+			content: ''
+			right: 0
+			left: 0
+			height: 5px
+			display: block
+			background: url(../img/con-bg.png) repeat-x
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+		+r(993)
+			margin-right: 0
+			&:after
+				display: none
+		.contacts
+			padding-left: 0
+			padding-right: 89px 
+
 .contacts
 	padding: 42px 30px 36px 49px 
+	position: relative
+		
+
 	.contacts__header
 		+rob-black
 		line-height: 1.4em
@@ -36,3 +65,39 @@ $redd: #e12633
 				+rob-b
 				color: #333
 				
+.article
+	margin-top:  57px 
+	padding-right: 60px 
+	+r(706)
+		padding-right: 0
+	.h2
+		margin-bottom: 21px 
+		&:before
+			margin-bottom: 13px 
+	.h2 + p
+		margin-bottom: 25px 
+		
+	p
+		margin-bottom: 15px
+	ol
+		counter-reset: list
+		li
+			padding-left: 25px 
+			position: relative
+			font-size: 16px
+			line-height: 1.8em 
+			&:first-child
+				+rob
+				color: #333 
+				font-size: 16px 
+			&:before
+				counter-increment: list
+				content: counter(list)"."
+				position: absolute
+				left: 0px
+				+rob-b
+	ul
+		li
+			line-height: 1.8em
+	.footer-p
+		margin-top: 40px 
