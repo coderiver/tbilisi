@@ -123,6 +123,7 @@ $stage: 30%
 .flats
 	margin: 0 auto 
 	padding-top: 1px
+	position: relative
 	&_house
 		+png(house_l)
 		background-position: 50% 
@@ -179,6 +180,24 @@ $stage: 30%
 	.flats__text
 		position: absolute
 		margin-top: 20px
+	.flats__footer
+		position: absolute
+		bottom: -120px
+		right: 0
+		span
+			vertical-align: middle
+			font-size: 16px 
+		.btn-red
+			border-radius: 5px
+			margin-left: 20px 
+		+r(767)
+			left: 0
+			text-align: center
+			span
+				display: block
+			.btn-red
+				margin-top: 20px
+				margin-left: 0
 .flat-nav-m
 	display: none
 	+r(767)
@@ -214,7 +233,15 @@ $stage: 30%
 		+r(992)
 			+scale(.8)
 			// +transform(scale(.8) translate(-50%,-0))
-		
+.flat
+	text-align: center
+	margin-top: 40px
+	img
+		width: auto
+		height: auto
+		max-width: 100%
+		max-height: 100%  
+
 .tip
 	position: absolute
 	border-radius: 2px

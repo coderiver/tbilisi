@@ -412,7 +412,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .flats-wrap_no-pt { padding-top: 25px; }
 @media only screen and (max-width: 767px) { .flats-wrap { padding-top: 25px; } }
 
-.flats { margin: 0 auto; padding-top: 1px; }
+.flats { margin: 0 auto; padding-top: 1px; position: relative; }
 .flats_house { background: url("../img/house_l.png") no-repeat 0 0; width: 895px; height: 319px; background-position: 50%; }
 @media only screen and (max-width: 992px) { .flats_house { background: url(../img/house_l.png) 50% 50% no-repeat; max-width: 750px; background-size: contain; } }
 @media only screen and (max-width: 768px) { .flats_house { width: 100%; } }
@@ -428,6 +428,12 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .flats .flats__list a div:before { content: ""; position: absolute; top: 50%; margin-top: -5px; left: -7px; width: 0px; height: 0px; border-style: solid; border-width: 5px 7px 5px 0; border-color: transparent #0b191b transparent transparent; }
 .flats .flats__list a div span { position: absolute; position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .flats .flats__text { position: absolute; margin-top: 20px; }
+.flats .flats__footer { position: absolute; bottom: -120px; right: 0; }
+.flats .flats__footer span { vertical-align: middle; font-size: 16px; }
+.flats .flats__footer .btn-red { border-radius: 5px; margin-left: 20px; }
+@media only screen and (max-width: 767px) { .flats .flats__footer { left: 0; text-align: center; }
+  .flats .flats__footer span { display: block; }
+  .flats .flats__footer .btn-red { margin-top: 20px; margin-left: 0; } }
 
 .flat-nav-m { display: none; }
 @media only screen and (max-width: 767px) { .flat-nav-m { display: block; width: 100%; }
@@ -441,6 +447,9 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .floor-map { text-align: center; position: relative; }
 .floor-map > div { display: inline-block !important; }
 @media only screen and (max-width: 992px) { .floor-map > div { -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); } }
+
+.flat { text-align: center; margin-top: 40px; }
+.flat img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
 
 .tip { position: absolute; border-radius: 2px; background: #0b191b; z-index: 11; color: #fff; width: 103px; height: 35px; text-align: center; font-size: 18px; padding-top: 4px; }
 .tip:after { content: ""; position: absolute; bottom: -7px; left: 50%; margin-left: -3px; width: 0px; height: 0px; border-style: solid; border-width: 7px 5px 0 5px; border-color: #0b191b transparent transparent transparent; }
