@@ -5,4 +5,5 @@ head.load("js/lib/jquery.js",
 					"js/lib/fancybox.js",
 					"js/lib/smoothscroll.js",
 					"js/lib/mCustomScrollbar.min.js",
+					"js/lib/map.js",
 					"js/common.js");
