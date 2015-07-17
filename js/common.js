@@ -47,6 +47,7 @@ head.ready(function() {
 
         return false;
     });
+
     $(function() {
         if ($('.floor-map img').length) {
             $('.floor-map img').maphilight();
@@ -98,5 +99,10 @@ head.ready(function() {
             });
         });
     });
+	if($('.floor-map').length){
+        setTimeout(function() {
+            $('.floor-map').addClass("is-ready");
+        }, 200);
+	}
 
 });

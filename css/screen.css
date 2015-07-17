@@ -371,6 +371,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 
 .back-link { color: #333; }
 .back-link i { color: #e12633; vertical-align: middle; font-size: 15px; margin-right: 10px; }
+.back-link:hover i { color: #ba1a25; }
 
 .icon-marker { display: inline-block; background: url("../img/svg/marker.svg") no-repeat 0 0; -moz-background-size: 18px 20px; -o-background-size: 18px 20px; -webkit-background-size: 18px 20px; background-size: 18px 20px; width: 18px; height: 20px; display: inline-block; }
 
@@ -431,7 +432,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .flats .flats__footer { position: absolute; bottom: -120px; right: 0; }
 .flats .flats__footer span { vertical-align: middle; font-size: 16px; }
 .flats .flats__footer .btn-red { border-radius: 5px; margin-left: 20px; }
-@media only screen and (max-width: 767px) { .flats .flats__footer { left: 0; text-align: center; }
+@media only screen and (max-width: 767px) { .flats .flats__footer { left: 0; text-align: center; position: relative; bottom: 0; margin-top: 20px; }
   .flats .flats__footer span { display: block; }
   .flats .flats__footer .btn-red { margin-top: 20px; margin-left: 0; } }
 
@@ -441,30 +442,26 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
   .flat-nav-m a:hover { background: #333; } }
 
 .action-l { background: #f73749; text-align: center; margin-top: 200px; }
-@media only screen and (max-width: 550px) { .action-l { margin-top: 120px; } }
-@media only screen and (max-width: 640px) { .action-l { margin-top: 65px; } }
+@media only screen and (max-width: 767px) { .action-l { margin-top: 65px; } }
 .action-l .action-l__title { padding: 23px 0; font-size: 20px; color: #fff; }
 .action-l .action-l__title strong { font-family: "Roboto Bold", Arial, sans-serif; }
 
-.flats-wrap .flats__footer + .flats-wrap .action-l { margin-top: 200px; }
-
-.floor-map { text-align: center; position: relative; }
-@media only screen and (max-width: 992px) { .floor-map { height: 750px; } }
-@media only screen and (max-width: 768px) { .floor-map { height: 700px; } }
-@media only screen and (max-width: 640px) { .floor-map { height: 625px; } }
-@media only screen and (max-width: 570px) { .floor-map { height: 550px; } }
-@media only screen and (max-width: 444px) { .floor-map { height: 460px; } }
-@media only screen and (max-width: 360px) { .floor-map { height: 444px; } }
-.floor-map > div { display: inline-block !important; }
-@media only screen and (max-width: 992px) { .floor-map > div { position: absolute !important; left: 39%; -moz-transform: scale(0.8) translate(-50%, 0); -ms-transform: scale(0.8) translate(-50%, 0); -webkit-transform: scale(0.8) translate(-50%, 0); transform: scale(0.8) translate(-50%, 0); } }
-@media only screen and (max-width: 767px) { .floor-map > div { left: 32%; -moz-transform: scale(0.7) translate(-50%, 0); -ms-transform: scale(0.7) translate(-50%, 0); -webkit-transform: scale(0.7) translate(-50%, 0); transform: scale(0.7) translate(-50%, 0); } }
-@media only screen and (max-width: 640px) { .floor-map > div { left: 22%; -moz-transform: scale(0.6) translate(-50%, 0); -ms-transform: scale(0.6) translate(-50%, 0); -webkit-transform: scale(0.6) translate(-50%, 0); transform: scale(0.6) translate(-50%, 0); } }
-@media only screen and (max-width: 570px) { .floor-map > div { left: 18%; top: -37px; } }
-@media only screen and (max-width: 537px) { .floor-map > div { left: 7%; -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); transform: scale(0.5) translate(-50%, 0); top: -52px; } }
-@media only screen and (max-width: 500px) { .floor-map > div { left: 0; } }
-@media only screen and (max-width: 444px) { .floor-map > div { -moz-transform: scale(0.45) translate(-60%, 0); -ms-transform: scale(0.45) translate(-60%, 0); -webkit-transform: scale(0.45) translate(-60%, 0); transform: scale(0.45) translate(-60%, 0); } }
-@media only screen and (max-width: 407px) { .floor-map > div { -moz-transform: scale(0.4) translate(-74%, 0); -ms-transform: scale(0.4) translate(-74%, 0); -webkit-transform: scale(0.4) translate(-74%, 0); transform: scale(0.4) translate(-74%, 0); top: -86px; } }
-@media only screen and (max-width: 360px) { .floor-map > div { -moz-transform: scale(0.36) translate(-89%, 0); -ms-transform: scale(0.36) translate(-89%, 0); -webkit-transform: scale(0.36) translate(-89%, 0); transform: scale(0.36) translate(-89%, 0); } }
+.floor-map { visibility: hidden; }
+@media only screen and (max-width: 992px) { .floor-map { margin-top: 140px; height: 610px; } }
+@media only screen and (max-width: 768px) { .floor-map { height: 560px; } }
+@media only screen and (max-width: 640px) { .floor-map { height: 485px; } }
+@media only screen and (max-width: 537px) { .floor-map { height: 415px; } }
+@media only screen and (max-width: 444px) { .floor-map { height: 350px; } }
+@media only screen and (max-width: 360px) { .floor-map { height: 304px; } }
+.floor-map.is-ready { visibility: visible; }
+.floor-map > div { margin: 0 auto; }
+@media only screen and (max-width: 992px) { .floor-map > div { -moz-transform-origin: top left; -ms-transform-origin: top left; -webkit-transform-origin: top left; transform-origin: top left; -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); } }
+@media only screen and (max-width: 767px) { .floor-map > div { -moz-transform: scale(0.7); -ms-transform: scale(0.7); -webkit-transform: scale(0.7); transform: scale(0.7); } }
+@media only screen and (max-width: 640px) { .floor-map > div { -moz-transform: scale(0.6); -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); } }
+@media only screen and (max-width: 537px) { .floor-map > div { -moz-transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5); transform: scale(0.5); } }
+@media only screen and (max-width: 444px) { .floor-map > div { -moz-transform: scale(0.45); -ms-transform: scale(0.45); -webkit-transform: scale(0.45); transform: scale(0.45); } }
+@media only screen and (max-width: 407px) { .floor-map > div { -moz-transform: scale(0.4); -ms-transform: scale(0.4); -webkit-transform: scale(0.4); transform: scale(0.4); } }
+@media only screen and (max-width: 359px) { .floor-map > div { -moz-transform: scale(0.355); -ms-transform: scale(0.355); -webkit-transform: scale(0.355); transform: scale(0.355); } }
 
 .flat { text-align: center; margin-top: 40px; }
 .flat img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
