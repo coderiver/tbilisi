@@ -4334,6 +4334,7 @@ body.header_style_white .logo
 
 body.header_style_dark .top_nav .top_nav_wrapper > ul > li > a:hover,
 body.header_style_dark .top_nav .main_menu_nav > ul > li > a:hover,
+body.header_style_dark .top_nav .main_menu_nav > ul > li.active,
 body.header_style_dark .top_nav .top_nav_wrapper > ul > li.current-menu-item > a,
 body.header_style_dark .top_nav .main_menu_nav > ul > li.current-menu-item > a,
 body.header_style_dark .top_nav .top_nav_wrapper > ul > li.current-menu-parent > a,
@@ -4406,6 +4407,10 @@ body.header_style_white .entry-header
 body.header_style_white .top_nav .top_nav_wrapper > ul > li > a,
 body.header_style_white .top_nav .main_menu_nav > ul > li > a{
     color: #333333;
+}
+body.header_style_white .top_nav .top_nav_wrapper > ul > li.active > a ,
+body.header_style_white .top_nav .main_menu_nav > ul > li.active >a{
+    color: #e12633;
 }
 
 body.header_style_white .top_nav .top_nav_wrapper > ul > li ul li,

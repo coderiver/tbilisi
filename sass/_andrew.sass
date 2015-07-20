@@ -48,32 +48,48 @@ $redd: #e12633
 	.contacts__header
 		+rob-black
 		line-height: 1.4em
+		text-transform: uppercase
 		&:before
 			margin-bottom: 15px 
 	.contacts__in
 		margin-top: 35px
 		li
 			margin-bottom: 20px
-			padding-left: 29px
+			padding-left: 0
 			&:before
 				display: none
-			i
-				position: absolute
-				left: 0
-				color: $redd
-				margin-right: 11px
-				width: 18px 
-				&.fa-phone-square
-					font-size: 20px
-				&.fa-envelope
-					top: 2px
-					font-size: 18px 
+			// i
+			// 	position: absolute
+			// 	margin-right: 11px
+			// 	width: 18px 
+			// 	&.fa-phone-square
+			// 		font-size: 20px
+			// 	&.fa-envelope
+			// 		top: 2px
+			// 		font-size: 18px 
 			a,
 			span
 				font-size: 16px
 			a
 				+rob-b
+				position: relative
 				color: #333
+				padding-left: 29px
+				&:before
+					position: absolute
+					font-family: "FontAwesome"
+					display: inline-block
+					left: 0
+					color: $redd
+			&:nth-child(1)
+				a:before
+					content: '\f098'
+					font-size: 20px 
+					line-height: 1
+			&:nth-child(3)
+				a:before
+					content: '\f0e0'
+					font-size: 18px 
 				
 .article
 	margin-top:  57px 
@@ -86,6 +102,10 @@ $redd: #e12633
 			margin-bottom: 13px 
 	.h2 + p
 		margin-bottom: 25px 
+	h3
+		margin: 20px  0
+		&:before
+			display: none
 		
 	p
 		margin-bottom: 15px
@@ -184,7 +204,7 @@ $redd: #e12633
 		margin-top: 20px
 	.flats__footer
 		position: absolute
-		bottom: -120px
+		bottom: -75px
 		right: 0
 		span
 			vertical-align: middle
@@ -223,10 +243,9 @@ $redd: #e12633
 .action-l
 	background: #f73749 
 	text-align: center
-	margin-top: 200px
+	margin-top: 100px
 	+r(767)
 		margin-top: 65px 
-
 	.action-l__title
 		padding: 23px 0
 		font-size: 20px
@@ -305,3 +324,10 @@ $redd: #e12633
 		margin-left: -3px 
 		+arr(10, 7,#0b191b,b)
 	
+.slick
+	visibility: hidden
+	opacity: 0
+	+tr(opacity .6s)
+	&.is-ready
+		opacity: 1
+		visibility: visible

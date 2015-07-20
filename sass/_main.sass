@@ -18,6 +18,9 @@
 				&:hover,
 				&.is-active
 					color: #FFF
+			&.active
+				a
+					color: #FFF
 	.top_bar_info
 		li
 			position: relative
@@ -100,6 +103,10 @@
 			font-weight: normal
 			+rob-black
 			+transition(color 0.2s ease, background 0.2s ease)
+		&.active
+			a
+				color: #e12633
+		
 
 body.header_style_white .top_nav .top_nav_wrapper > ul
 	+r(1200)
@@ -346,9 +353,23 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		&.bl-33
 			width: 33.33%
 		.col__card
+			position: relative
 			&:hover
 				.col__btn
 					background: darken(#f73749, 10%)
+					
+			&.is-vip
+				.col__el
+					&:after
+						content: ''
+						position: absolute
+						top: 23px
+						right: 23px
+						border-radius: 4px
+						height: 45px
+						width: 45px  
+						background: #fff url(../img/icons/star.png) center no-repeat 
+						
 	.col__el
 		position: relative
 		width: 100%
@@ -372,19 +393,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			bottom: 0
 			box-shadow: inset 0px -35px 50px 0px rgba(0,0,0,0.5)
 			z-index: 1
-		.vip
-			position: absolute
-			top: 23px
-			right: 23px
-			width: 42px
-			height: 42px
-			background: #FFF
-			border-radius: 4px
-			+vertical
-		.star_ico
-			display: inline-block
-			vertical-align: middle
-			+s(star)
+
 	.col__name
 		position: absolute
 		left: 25px
@@ -405,8 +414,7 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 			bottom: 0
 			background: rgba(#000, 0.6)
 			z-index: 1
-		&:after
-			content: "Больше фотографий..."
+		span
 			position: absolute
 			top: 50%
 			left: 0
@@ -442,6 +450,8 @@ body.header_style_white .top_nav .top_nav_wrapper > ul
 		+transition(background 0.2s ease)
 		&.s-pad
 			padding: 10px
+		&:hover
+			background: darken(#f73749, 10%)
 	.col__person
 		position: relative
 		float: right

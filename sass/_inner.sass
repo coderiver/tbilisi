@@ -88,18 +88,22 @@
 	.details__body
 		border: 1px solid #e2e2e2
 		border-radius: 0 0 5px 5px
+		
 	.details__table
 		margin: 0
 		font-size: 16px
 		color: #333
 		border-top: 1px solid #e2e2e2
 		table-layout: fixed
+		border-radius: 0 0 5px 5px
 		tr
 			&:nth-child(even)
 				background: #F3F3F3
 		td
 			padding: 10px 15px
 			border: none
+			&:first-child
+				text-align: left
 	.details__plan
 		padding: 25px 10px
 		text-align: center
@@ -117,10 +121,10 @@
 					padding-bottom: 50px
 					border-radius: 5px 5px 0 0
 					border-bottom: 1px solid #E9E9E9
-			&:last-child
+			&:last-of-type
 				.input
 					border-radius: 0 0 5px 5px
-					border-bottom: none
+					border-bottom: 0
 		p
 			margin-top: 35px
 		.input
@@ -215,6 +219,10 @@
 			margin-right: 5px
 			font-weight: normal
 			+rob-b
+		h3
+			margin: 20px 0
+			&:before
+				display: none
 		a
 			position: relative
 			display: inline-block
