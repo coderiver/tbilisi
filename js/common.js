@@ -114,17 +114,19 @@ head.ready(function() {
 
 		function initialize() {
 			var myLatlng = new google.maps.LatLng(41.700961, 44.767650);
+			var markerPosition = new google.maps.LatLng(41.700709, 44.767940);
 			var mapOptions = {
-				zoom: 18,
+				zoom: 17,
 				scrollwheel: false,
 				zoomControl: true,
+				mapTypeControl: false,
 				center: myLatlng
 			}
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			var image = 'img/house.png';
 
 			var marker = new google.maps.Marker({
-				position: myLatlng,
+				position: markerPosition,
 				map: map,
 				title: 'г. Тбилиси, ул. Нино Жвания, 28',
 				icon: image

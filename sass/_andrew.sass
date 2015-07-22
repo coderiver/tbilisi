@@ -58,23 +58,16 @@ $redd: #e12633
 			padding-left: 0
 			&:before
 				display: none
-			// i
-			// 	position: absolute
-			// 	margin-right: 11px
-			// 	width: 18px 
-			// 	&.fa-phone-square
-			// 		font-size: 20px
-			// 	&.fa-envelope
-			// 		top: 2px
-			// 		font-size: 18px 
 			a,
 			span
 				font-size: 16px
+				padding-left: 29px
 			a
 				+rob-b
 				position: relative
 				color: #333
-				padding-left: 29px
+			a,
+			span
 				&:before
 					position: absolute
 					font-family: "FontAwesome"
@@ -82,6 +75,23 @@ $redd: #e12633
 					left: 0
 					color: $redd
 			&:nth-child(1)
+				a:before
+					content: '\f098'
+					font-size: 20px 
+					line-height: 1
+			&:nth-child(3)
+				a:before
+					content: '\f0e0'
+					font-size: 18px 
+	&_full
+		li
+			&:nth-child(1)
+				span:before
+					content: ''
+					line-height: 1
+					display: inline-block
+					+svg(marker,18,20)
+			&:nth-child(2)
 				a:before
 					content: '\f098'
 					font-size: 20px 
