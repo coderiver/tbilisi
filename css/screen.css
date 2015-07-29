@@ -313,6 +313,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .details .details__plan .fancybox { display: inline-block; }
 .details .details__plan .fancybox img { max-width: 100%; }
 .details .details__form { margin: 35px 0 0; color: #FFF; font-size: 16px; }
+.details .details__form .form__input .input, .details .details__form .form__input .textarea { border-radius: 0; }
 .details .details__form .form__input:first-child .textarea { padding-bottom: 50px; border-radius: 5px 5px 0 0; border-bottom: 1px solid #E9E9E9; }
 .details .details__form .form__input:last-of-type .input { border-radius: 0 0 5px 5px; border-bottom: 0; }
 .details .details__form p { margin-top: 35px; }
