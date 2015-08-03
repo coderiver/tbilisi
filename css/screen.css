@@ -132,7 +132,7 @@ blockquote { margin: 25px 0; padding-left: 20px; color: #333; font-size: 16px; b
 .welcome .txt-red { color: #E12633; }
 .welcome .fa.fa-angle-down { margin-top: 20px; font-size: 35px; color: #E12633; }
 @media only screen and (max-width: 992px) { .welcome .welcome__ttl { font-size: 35px; } }
-@media only screen and (max-width: 768px) { .welcome .welcome__in { top: 0; width: 280px; height: auto; margin: 0 0 0 -150px; -moz-transform: translateY(50%); -ms-transform: translateY(50%); -webkit-transform: translateY(50%); transform: translateY(50%); }
+@media only screen and (max-width: 768px) { .welcome .welcome__in { top: 0; width: 280px; height: auto; margin: 0 0 0 -140px; -moz-transform: translateY(50%); -ms-transform: translateY(50%); -webkit-transform: translateY(50%); transform: translateY(50%); }
   .welcome .fa.fa-angle-down { margin-top: 0; } }
 
 .section { padding: 65px 0; *zoom: 1; }
